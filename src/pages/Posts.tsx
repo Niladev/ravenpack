@@ -1,10 +1,8 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useJsonPlaceholderApi } from "../hooks/useJsonPlaceholder";
 import { JSONPost } from "../types";
 import styles from "./Posts.module.css";
-export const Posts = () => {
-  const { userId } = useParams();
-
+export const Posts = ({ userId }: { userId?: string }) => {
   const { data, isLoading, error } = useJsonPlaceholderApi<JSONPost[]>(
     `/posts${userId ? `?userId=${userId}` : ""}`
   );
