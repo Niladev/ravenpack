@@ -11,6 +11,8 @@
   font-size: 24px;
   text-transform: capitalize;
   margin: 15px;
+  display: block;
+  width: fit-content;
 }
 
 .posts .title:hover {

@@ -26,7 +26,7 @@ export const Comments = ({ postId }: { postId: string }) => {
           <div className={styles.comment}>
             <h3 className={styles.title}>{comment.name}</h3>
             <span className={styles.body}>{comment.body}</span>
-            <span className={styles.email}>{comment.email}</span>
+            <span className={styles.email}>- {comment.email}</span>
           </div>
         );
       })}
