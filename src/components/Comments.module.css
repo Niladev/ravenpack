@@ -8,7 +8,7 @@
 }
 
 .title {
-  font-size: 14px;
+  font-size: 1rem;
   text-decoration: underline;
   text-transform: capitalize;
   margin: 0;
@@ -18,11 +18,17 @@
 
 .body {
   margin: 5px 0;
-  font-size: 12px;
+  font-size: 0.8rem;
   color: #3d3d3d;
 }
 
 .email {
-  font-size: 12px;
+  font-size: 0.8rem;
   color: #5d5d5d;
+}
+
+@media only screen and (max-width: 600px) {
+  .comment {
+    width: 90%;
+  }
 }

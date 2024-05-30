@@ -32,7 +32,7 @@ export const Post = () => {
         to={`/user/${data.userId}`}
         className={styles.user}
       >{`User ${data?.userId}`}</Link>
-      <p>{data.body}</p>
+      <p className={styles.body}>{data.body}</p>
       {postId && <Comments postId={postId} />}
     </div>
   );

@@ -1,13 +1,12 @@
 .post {
   display: flex;
   flex-direction: column;
-
-  margin: 30px;
+  margin: 10%;
 }
 
 .title {
   font-weight: normal;
-  font-size: 24px;
+  font-size: 1.2rem;
   text-transform: capitalize;
   margin: 0;
 }
