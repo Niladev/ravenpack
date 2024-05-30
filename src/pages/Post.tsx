@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { useJsonPlaceholderApi } from "../hooks/useJsonPlaceholder";
 import { PostInterface } from "../types";
+import styles from "./Post.module.css";
 
 export const Post = () => {
   const { postId } = useParams();
@@ -22,9 +23,13 @@ export const Post = () => {
     return <h1>Loading...</h1>;
   }
   return (
-    <>
-      <h1>{data?.title}</h1>
-      <Link to={`/user/${data?.userId}`}>{data?.userId}</Link>
-    </>
+    <div className={styles.post}>
+      <h1 className={styles.title}>{data?.title}</h1>
+      <Link
+        to={`/user/${data?.userId}`}
+        className={styles.user}
+      >{`User ${data?.userId}`}</Link>
+      <p>{data?.body}</p>
+    </div>
   );
 };

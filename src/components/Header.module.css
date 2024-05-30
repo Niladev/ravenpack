@@ -1,0 +1,13 @@
+.header {
+  padding: 30px;
+  width: 100%;
+  font-size: 32px;
+}
+
+.header svg {
+  max-width: 269px;
+}
+
+.logoBlack {
+  fill: #eca706;
+}
