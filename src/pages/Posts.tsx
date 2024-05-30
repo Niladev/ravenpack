@@ -2,13 +2,14 @@ import { Link } from "react-router-dom";
 import { useJsonPlaceholderApi } from "../hooks/useJsonPlaceholder";
 import { JSONPost } from "../types";
 import styles from "./Posts.module.css";
+import { Loading } from "../components/Loading";
 export const Posts = ({ userId }: { userId?: string }) => {
   const { data, isLoading, error } = useJsonPlaceholderApi<JSONPost[]>(
     `/posts${userId ? `?userId=${userId}` : ""}`
   );
 
   if (isLoading) {
-    return <h1>Loading...</h1>;
+    return <Loading />;
   }
 
   if (error || !data) {
@@ -19,6 +20,7 @@ export const Posts = ({ userId }: { userId?: string }) => {
       </>
     );
   }
+
   return (
     <div className={styles.posts}>
       {data?.map((post) => {

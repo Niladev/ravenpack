@@ -3,6 +3,7 @@ import { useJsonPlaceholderApi } from "../hooks/useJsonPlaceholder";
 import { JSONPost } from "../types";
 import styles from "./Post.module.css";
 import { Comments } from "../components/Comments";
+import { Loading } from "../components/Loading";
 
 export const Post = () => {
   const { postId } = useParams();
@@ -12,7 +13,7 @@ export const Post = () => {
   );
 
   if (isLoading) {
-    return <h1>Loading...</h1>;
+    return <Loading />;
   }
 
   if (error || !data) {

@@ -11,8 +11,7 @@ body {
 }
 #root {
   display: flex;
-  min-width: 100vh;
-  max-width: 972px;
+  width: 100%;
   align-items: center;
   flex-direction: column;
 }
