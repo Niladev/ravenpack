@@ -2,12 +2,24 @@
   padding: 30px;
   width: 100%;
   font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header svg {
-  max-width: 269px;
+  max-width: 270px;
+  width: 270px;
 }
 
 .logoBlack {
   fill: #eca706;
+}
+
+.navItem {
+  font-size: 18px;
+}
+
+.navItem:hover {
+  color: #eca706;
 }

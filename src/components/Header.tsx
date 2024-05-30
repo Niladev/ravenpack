@@ -8,6 +8,9 @@ export const Header = () => {
       <Link to="/">
         <RavenPackLogo />
       </Link>
+      <Link to="/" className={styles.navItem}>
+        All posts
+      </Link>
     </header>
   );
 };
